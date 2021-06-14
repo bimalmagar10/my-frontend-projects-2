@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+	margin:0;
+	padding:0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	@include respond (tab-land){
+      font-size: 56.25%;
+	}
+}
+body {
+	font-family:sans-serif;
+	box-sizing: border-box;
+	padding:2rem ;
+	background-color: $color-secondary;
+	@include respond (tab-land){
+      padding: 0;
+	}
+}
+.container {
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: [full-start] minmax(5rem,1fr) [center-start] 
+							repeat(7,[col-start]minmax(9rem,1fr)) [col-end center-end]  minmax(5rem,1fr) [full-start];
+
+	@include respond(phone){
+         grid-template-columns: [full-start] minmax(5rem,1fr) [center-start] 
+							repeat(7,[col-start]minmax(min-content,1fr)) [col-end center-end]  minmax(5rem,1fr) [full-start];
+	}
+}
+.copyright {
+	margin-top: 10rem;
+	text-align: center;
+	font-size: 1.7rem;
+	color: $color-secondary-light-1;
+	line-height: 1.4;
+	padding: 2rem;
+	border: 1px solid $color-secondary-light-2;
+	border-radius: 5px;
+}

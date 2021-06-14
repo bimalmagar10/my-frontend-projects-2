@@ -1,0 +1,136 @@
+.heading--secondary {
+	text-align: center;
+	font-size: 1.6rem;
+	color: $color-primary;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+.recipe {
+	// grid-column:start-second / end-second;
+	// grid-row: 2 / 3;
+	grid-area: recipe;
+	background-color: $color-grey-light-1;
+	&__fig {
+      height: 30rem;
+      width: auto;
+      position: relative;
+      &::after {
+      	content: "";
+      	position: absolute;
+      	height: 100%;
+      	width: 100%;
+      	top: 0;
+      	left: 0;
+      	background-image: $gradient;
+      	opacity: 0.5;
+      }
+	}
+	&__img {
+		height: 100%;
+		width: 100%;
+	}
+	&__title {
+		color: $color-white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,20%) skewY(-6deg);
+        z-index: 100;
+        width: 50%;
+        text-align: center;
+        span {
+        	-webkit-box-decoration-break:clone;
+        	box-decoration-break: clone;
+        	background-image: $gradient;
+        	padding: 1rem;
+        }
+	}
+	&__details {
+		padding: 6rem 5rem;
+		display: flex;
+		& > *:not(:last-child){
+			margin-right: 5rem;
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		&-icon {
+			height: 2rem;
+			width: 2rem;
+			fill: $color-primary;
+		}
+		&-data {
+			font-size: 1.3rem;
+			font-weight: 300;
+			margin: 0 5px 0 8px;
+			&--minutes {
+				font-weight: 800;
+			}
+			&--people {
+				font-weight: 800;
+			}
+		}
+		&-text {
+			text-transform: uppercase;
+		}
+		&-buttons {
+       		margin-left: .8rem;
+       		display: flex;
+       		& > *:not(:last-child){
+       			margin-right: 4px;
+       		}
+		}
+	}
+	&__ingredients {
+		background-color: $color-grey-light-2;
+		padding:4rem 5rem;
+		display: flex;
+		flex-direction: column;
+		&-list {
+			list-style-type: none;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			grid-gap: 1.5rem;
+			justify-items:start;
+		}
+	}
+	&__ingredient {
+		color: $color-grey-dark-1;
+		font-size: 1.3rem;
+		display: flex;
+		align-items: stretch;
+	}
+	&__icon {
+		height: 1.5rem;
+		width: 1.5rem;
+		fill:$color-primary;
+		margin-right: .5rem;
+	}
+	&__quantity {
+		margin-right: 2px;
+	}
+	&__unit {
+        margin-right: 2px;
+	}
+	&__directions {
+		padding: 5rem;
+		display: flex;
+		flex-direction: column;
+		&-text {
+			font-size: 1.6rem;
+			color: $color-grey-dark-2;
+			text-align: center;
+		}
+		& > *:not(:last-child){
+			margin:0 auto 5rem;
+		}
+	}
+	&__publisher {
+		color:$color-grey-dark-1;
+	}
+}

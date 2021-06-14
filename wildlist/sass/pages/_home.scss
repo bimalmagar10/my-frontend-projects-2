@@ -1,0 +1,158 @@
+.header {
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+}
+.workshops {
+   background-color: $color-white;
+   grid-column: center-start / center-end;
+   grid-row: 2 / 3;
+   padding: 7rem 0;
+}
+.experiences {
+    background-color: $color-grey;
+    grid-column: full-start / full-end;
+    grid-row: 3 / 4;
+    padding: 12rem 5rem;
+    @include responsive(phone){
+          padding: 4rem;
+    }
+}
+.reviews {
+   background-color: $color-black-dark;
+   grid-column: full-start / full-end;
+   grid-row: 4 / 5;
+}
+.cover {
+   grid-column: full-start / full-end;
+   grid-row: 5 / 6;
+   position: relative;
+   &__picture {
+     width: 100%;
+     height: 100%;  
+   }
+   &__img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+   }
+   &__info {
+     position:absolute;
+     right: 15%;
+     bottom: 20%; 
+     font-size: 1.8rem;
+     font-weight: 300;
+     letter-spacing: 1px;
+     color: $color-white;
+     & > * {
+      display: inline-block;
+      line-height: 1.5;
+     }
+   }
+}
+.stories {
+   background-color: $color-primary;
+   grid-column: full-start / full-end;
+   grid-row: 6 / 7;
+   padding: 7rem;
+   @include responsive(phone){
+    padding:3rem;
+  }
+  @include responsive(small-phone){
+    padding:3rem 1rem;
+  }
+}
+.advertisement {
+   grid-column: full-start / full-end;
+   grid-row: 7 / 8;
+   &__bg {
+     background-image:linear-gradient(to right,rgba($color-white,.01),rgba($color-white,.1)),url("../img/advertisement.jpg");
+     background-size:cover;
+     height: 100%;
+     background-repeat: no-repeat;
+     width: 100%;
+     background-position: 50% 100%;
+     display: flex;
+     align-items: center;
+   }
+   &__container {
+      display: flex;
+      color: $color-white;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 60%;
+      width: 70%;
+      justify-content: center;
+      align-content: center;
+      @include responsive(small-phone){
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-content: flex-start;
+      }
+      & > :not(:last-child){
+        margin-bottom:4rem; 
+      }
+      & > h3 {
+        font-weight: 800;
+        font-size: 4rem;
+      }
+      @include responsive(tab-port) {
+        margin: 10rem auto;
+      }
+   }
+   &__text {
+      font-size: 2.5rem;
+      width: 45%;
+      font-weight: 300;
+      line-height: 1.5;
+      @include responsive(small-phone){
+        width: 100%;
+        hyphens: auto;
+      }
+   }
+   &-btn {
+     &:link,
+     &:visited {
+       color: $color-primary-light;
+       background-color: $color-white;
+       padding: 2rem 2.5rem;
+       text-decoration: none;
+       font-size:1.5rem;
+       transition: all .2s;
+       display: inline-block;
+     }
+     &:hover {
+      background-color: $color-blue;
+      color: $color-white;
+     }
+     @include responsive(small-phone){
+        display: block;
+        width: 100%;
+        text-align: center;
+     }
+     
+   }
+}
+.journal {
+   grid-column: center-start / center-end;
+   grid-row: 8 / 9;
+}
+.footer-left {
+   background-color: $color-primary-light;
+   grid-column: full-start / col-end 7;
+   grid-row: 9 / 10;
+   @include responsive(tab-port){
+    grid-column:1 / -1;
+   }
+}
+.footer-right {
+   background-color: $color-black-light-2;
+   grid-column: col-start 8 / -1;
+   grid-row: 9 / 10;
+   @include responsive(tab-port){
+    grid-row:10 / 11;
+    grid-column:1 / -1;
+   }
+}

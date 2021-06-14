@@ -1,0 +1,136 @@
+%svg-icon{
+	height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-brown;
+}
+.reviews {
+	&__container {
+		color:$color-white;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		& > *:not(:last-child) {
+          margin-bottom: 2rem;
+		}
+		padding-top: 3rem;
+		padding-bottom: 30rem;
+
+	}
+	&__header {
+		display: flex;
+		align-items:center;
+		justify-content: flex-start;
+	}
+	&__logo {
+		padding: 1rem;
+		background-color:$color-primary-light;
+		display: inline-block;
+		border-radius: 50%;
+		margin-right: 2rem;
+	}
+	&__icon {
+       @extend %svg-icon;
+	}
+	&__heading {
+       font-size: $font-default-size;
+       font-weight: 700;
+       letter-spacing: 1px;
+	}
+	&__rating {
+       font-size:3rem;
+       font-weight: 300;
+       line-height: 1.2;
+       letter-spacing: 1px;
+       &--number {
+       	font-size: 3.5rem;
+       	font-weight: 800;
+       }
+	}
+	&__divider {
+      height: 1px;
+      background-color: $color-white;
+      margin-bottom: 5rem !important;
+	}
+	&__content {
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+		grid-column-gap: 2rem;
+		align-items: start;
+		justify-content: start;
+		@include responsive(tab-port){
+			grid-template-columns: 1fr;
+			grid-row-gap:4rem;
+		}
+		&--item {
+			border-right: 1px solid rgba($color-white,.5);
+			@include responsive(tab-port){
+			   border-right: none;
+		    }
+			&-box {
+              padding-right: 3.1rem;
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+              flex-direction: column;
+              & > *:not(:last-child) {
+				margin-bottom: 1rem;
+              }
+			}
+		}
+		&--logo-box {
+
+		}
+		&--icon {
+		 	@extend %svg-icon;
+		 	height: 3rem;
+		 	width: 3rem;
+		}
+		&--block {
+			height: 1px;
+			width: 30%;
+			background-color: rgba($color-white,.64);
+			margin-top: 3rem;
+			margin-bottom: 3rem !important;
+		}
+		&--more-link {
+			&:link,
+			&:visited {
+				display: inline-block;
+				padding: .5rem 1rem;
+				margin-top: 1.5rem;
+	           display: inline-block;
+	           font-size: 1.5rem;
+	           text-decoration: none;
+	           color:$color-black-dark;
+	           align-self:flex-end;
+	           background-color: $color-white;
+	           transition: all .2s;
+			}
+			&:hover {
+				color: currentColor;
+				background-color: $color-blue;
+			}           
+		}
+	}
+	&__comment {
+        font-size: 2rem;
+        line-height: 1.4;
+        letter-spacing: 1px;
+	}
+	&__author-name {
+		font-size: 1.6rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+	&__details {
+       color:$color-white-light;
+       font-size: 1.6rem;
+       line-height: 1.4;
+       letter-spacing: 1px;
+       width: 90%;
+       font-weight: 300;
+	}
+}

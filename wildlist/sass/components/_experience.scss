@@ -1,0 +1,125 @@
+.experience {
+	&__head {
+		display: grid;
+		grid-template-columns:repeat(auto-fit,minmax(30rem,1fr));
+		grid-gap: 8rem;
+		justify-items:start;
+		align-items: start;
+	}
+	&__picture {
+       grid-column: 1 / 2;
+	}
+	&__img {
+       width: 100%;
+       height: 80%;
+       object-fit: cover;
+       display: block;
+	}
+	&__description {
+       display:flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: flex-start;
+       & > h3 {
+		font-size:2.5rem;
+		padding-bottom:3rem;
+		border-bottom: 1px solid rgba($color-black-dark,.5);
+		width: 100%;
+		font-weight: 300;
+		position: relative;
+		& > strong {
+			font-weight:bold;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			height: 3px;
+			width: 30%;
+			left: 0;
+			bottom: 0;
+			background-color: $color-black-dark;
+		}
+       }
+       & > :not(:first-child){
+       	margin-top: 5rem;
+       }
+       & > h2 {
+       	font-weight: bold;
+       }
+
+       
+	}
+	&__text {
+		font-weight: 300;
+		font-size:2.8rem;
+		width: 70%;
+	}
+	&__instructors {
+		width: 90%;
+		// padding: 10rem 0;
+		padding-top: 10rem;
+		display: grid;
+		grid-template-columns: 0.3fr .6fr ;
+		justify-content: center;
+		justify-items:center;
+		align-items: center;
+		grid-gap: 4rem;
+		margin:0 auto;
+		// @media only screen and (max-width: 1000px){
+  //           grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+  //           grid-gap: 2rem; 
+  //           margin:0;	
+  //       }
+        @include responsive(tab-port){
+            grid-gap: 2rem; 
+            margin:0;
+            width: 100%;
+        }
+        @include responsive(phone){
+        	grid-template-columns: 1fr ;
+        	grid-row-gap: 7rem;
+        }
+		&--info {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;          
+          align-items: flex-start;
+          & > :not(:last-child){
+          	margin-bottom: 5rem;
+          }
+		}
+		&--text {
+			font-size: 2rem;
+			width: 50%;
+			line-height: 1.6;
+		}
+		&--images {
+            display: grid;
+            grid-template-columns: repeat(4,1fr); 
+            justify-items:center;
+            align-items:center;
+            grid-gap: 3rem;
+            width: 100%;
+            @include responsive(small-phone){
+            	 grid-template-columns: repeat(2,1fr);
+            }
+
+		}
+		&--picture {
+
+		}
+		&--img {
+            height: 12rem;
+            width: 12rem;
+            display: block;
+            object-fit: cover;
+            border-radius: 50%;
+            @include responsive(tab-port){
+            	height: 10rem;
+                width: 10rem;
+            }
+		}
+
+	}
+}

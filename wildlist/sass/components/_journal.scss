@@ -1,0 +1,63 @@
+.journal {
+	&__box {
+        padding: 8rem 0;   
+	}
+	&__card {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+		grid-template-rows:auto;
+		align-items: start;
+		justify-content: start;
+	    grid-row-gap: 5rem;
+		grid-column-gap: 3rem;
+		&--name {
+          font-size: $font-default-size;
+          color: $color-black-light-3;
+          display: inline-block;
+		}
+		@include responsive(phone){
+			grid-template-columns: 1fr;
+		}
+	}
+	&__container {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	&__photo {
+		width: 100%;
+        height: 30rem;
+        margin-bottom: 2rem;
+        @include responsive(phone){
+			height: 300px;			
+		}
+	}
+	&__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+	}
+	&__info {
+       height: 20%;
+       & > * {
+       	line-height: 1.4;
+       }
+       & > h3 {
+       	transition: all .2s;
+       	&:hover {
+       		cursor: pointer;
+       		color: $color-blue;
+       	}
+       }
+	}
+	&__caption {
+      font-size: $font-default-size;
+      letter-spacing: 1px;
+      padding: 4px 1.3rem 4px 0;
+      display: inline-block;
+	}
+}

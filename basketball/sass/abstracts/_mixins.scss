@@ -1,0 +1,108 @@
+@mixin respond($breakpoint){
+    @if $breakpoint == tab-land {
+    	@media only screen and (max-width: 75em){@content;}
+    }
+     @if $breakpoint == phone {
+    	@media only screen and (max-width: 43.75em){@content;}
+    }
+     @if $breakpoint == small-phone {
+    	@media only screen and (max-width: 31.25em){@content;}
+    }
+}
+@mixin box-effect($colorHover,$colorDefault,$borderWidth,$borderHeight) {
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            height:$borderHeight;
+            width: 100%;
+            left: 0;
+            background-color: $colorDefault;
+          }
+          &::after {
+            bottom:0;
+          }
+          &::before {
+            top: 0;
+          }
+          & > * {
+              &::after,
+              &::before {
+              content: "";
+              position: absolute;
+              height:100%;
+              width:$borderWidth;
+              top: 0;
+              background-color:  $colorDefault;
+             }
+             &::after {
+                right: 0;
+             }
+             &::before {
+                left: 0;
+             }
+             & > * {
+                    &::after,
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      height: $borderHeight;
+                      width: 100%;
+                      left: 0;
+                      background-color:  $colorHover;
+                      z-index: 1000;
+                      
+                      transition: all .5s;
+                    }
+                    &::after {
+                      bottom:0;
+                      transform: translate(105%,0);
+                    }
+                    &::before {
+                      top: 0;
+                      transform: translate(-105%,0);
+                    }
+                    & > * {
+                      &::after,
+                      &::before {
+                      content: "";
+                      position: absolute;
+                      height:100%;
+                      width:$borderWidth;
+                      top: 0;
+                      background-color: $colorHover;
+                      z-index: 1000;
+                      
+                      transition: all .5s;
+                     }
+                     &::after {
+                        right: 0;
+                        transform: translate(0,-105%);
+                     }
+                     &::before {
+                        left: 0;
+                        transform: translate(0,105%);
+                     }
+                  }
+             }
+          }
+          &:hover {
+            & > * {
+              & > * {
+                &::after,
+                &::before {
+                  transform: translate(0,0);
+                  
+                }
+                
+                & > * {
+                    &::after,
+                    &::before {
+                    transform: translate(0,0);
+                    
+                  }
+                }
+              }
+            }
+          }
+}

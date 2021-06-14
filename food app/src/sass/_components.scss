@@ -1,0 +1,127 @@
+%btn {
+  	display: flex;
+  	justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn {
+	@extend %btn;
+	padding: 1rem 2rem;
+	background-image: $gradient;
+	color: $color-white;
+	border-radius: 100rem;
+}
+.btn--inline {
+   @extend %btn;
+   color: $color-primary;
+   border-radius: 5rem;
+   padding:.5rem 1rem;
+   background: $color-grey-light-1;
+   font-weight: 700;
+   & > * {
+    margin: 0 .3rem;
+   }
+}
+.btn--tiny {
+  @extend %btn;
+  background: none;
+}
+.btn--round {
+  @extend %btn;
+  padding: 1rem;
+  background-image: $gradient;
+  border-radius: 50%;
+  margin-left: auto;
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-white;
+  }
+}
+.btn--add {
+  @extend %btn;
+  color: $color-white;
+  background-image: $gradient;
+  width: 30%;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 100rem;
+  transition: transform .2s ease-in;
+     &:hover {
+      transform:scale(1.06);
+     }
+  svg {
+    height: 2rem;
+    width: 2rem;
+    fill: currentColor;
+  }
+}
+.btn--small {
+  &,
+  &:link,
+  &:visited {
+     @extend %btn;
+     background-image: $gradient;
+     text-decoration: none;
+     color:$color-white;
+     font-size:1.5rem;
+     border-radius: 100rem;
+     padding: 1.2rem 1rem;
+     width:30%;
+     margin:0 auto;
+  }
+  svg {
+     height: 1.75rem;
+     width: 1.75rem;
+     fill: currentColor;
+     margin-left: 2px;
+  }
+}
+.btn--delete {
+  border: none;
+  background:$color-grey-light-2;
+  color: $color-primary;
+  font-size:1.4rem;
+  padding: 5px 7px;
+  border-radius:3px;
+  margin-left: 5px;
+  margin-top: -5px;
+  cursor: pointer;
+  transform: translateX(20px);
+  opacity: 0;
+  transition: all .5s ease-out;
+}
+.loader {
+  margin: 5rem auto;
+  display:flex;
+  justify-content: center;
+  & > svg {
+      height:9rem;
+      width: 9rem;
+      fill: $color-primary;
+      animation: rotate 1s linear infinite;
+  }
+}
+.error {
+  height:20rem;
+  width: 20rem;
+  background-color: azure;
+  color: orangered;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 2rem 20rem rgba($color-grey-dark-1,.25);
+  border-radius: 2rem;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

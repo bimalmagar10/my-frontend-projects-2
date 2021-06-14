@@ -1,0 +1,16 @@
+.heading__primary {
+	 font-size:3rem;
+	 line-height: 1.4;
+}
+.heading__tertiary {
+	 font-size: 1.8rem;
+	 padding: 0 3rem;
+	 cursor:pointer;
+	 transition: all .3s;
+	 &:hover {
+	 	color: $color-primary;
+	 }
+}
+.heading__penta {
+	font-size: 1.5rem;
+}

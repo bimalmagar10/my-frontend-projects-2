@@ -1,0 +1,85 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba($color-black,.8);
+	height: 100vh;
+	z-index: 3000;
+	opacity: 0;
+	visibility: hidden;
+    transition: all .4s;
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
+	&_close {
+		display: inline-block;
+		font-size: 3rem;
+		position: absolute;
+		top: 1.5rem;
+		right: 2rem;
+		text-decoration: none;
+		line-height: 1;
+		&:hover {
+		 color: $color-primary;
+		}
+	}
+	&_content {
+		background-color: $color-white;
+		width: 75%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) scale(0.25);
+		display: table;
+		border-radius: 3px;
+        transition: all .4s .2s;
+	}
+	
+	&_left {
+		width: 33.3333%;
+		display: table-cell;
+		@include respond(tab-land){
+		    display: inline-block;
+		    width: 100%;
+		}
+
+	}
+	&_right {
+		width: 66.66666%;
+		display: table-cell;
+		vertical-align: middle;
+		padding:5rem 3rem;
+		@include respond(tab-land){
+			display: inline-block;
+			width: 100%;
+		}
+	}
+	&_img {
+		display:block;
+		width:100%;
+		@include respond(tab-land){
+			float: left;
+			width: 50%;
+			height: 21.5rem;
+		}
+	}
+	&_text {
+		margin-bottom: 3rem;
+		font-size: 1.4rem;
+
+		column-count: 2;
+		column-gap: 4rem;
+		column-rule: 1px solid $color-grey-2;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+	}
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+	&:target &_content {
+		transform: translate(-50%,-50%) scale(1);
+	}
+}

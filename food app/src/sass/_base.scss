@@ -1,0 +1,68 @@
+//Color Primary
+$color-primary: #f38e82;
+$color-grad-1: #fbdb89;
+$color-grad-2: #f48982;
+
+$color-grey-light-1: #f9f5f3; // Light background
+$color-grey-light-2: #f2efee; // Light lines
+$color-grey-light-3: #d3c7c3; // Light text (placeholder)
+$color-grey-dark-1: #615551; // Normal text
+$color-grey-dark-2: #918581; // Lighter text
+
+$color-white:#fff;
+
+$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+
+//Break points for responsive design
+$bp-large:78.125em;
+$bp-medium:61.25em;
+$bp-small:47.5em;
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding:0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	@media only screen and (max-width: $bp-medium){
+		font-size: 50%;
+	}
+}
+body {
+	box-sizing: border-box;
+	font-family:sans-serif;
+	background-image: $gradient;
+	background-size: cover;
+	background-repeat: no-repeat;
+	line-height: 1.6;
+	min-height: calc(100vh - 2 * 4vw);
+}
+.container {
+	max-width: 120rem;
+	margin:4vw auto;
+	min-height: 117rem;
+	display: grid;
+	grid-template-rows: 10rem minmax(50rem,auto);
+	grid-template-columns: [column-start] 1.1fr [end-first start-second] 2fr 
+	[end-second start-third] 1.1fr[column-end];
+	grid-template-areas: 
+	"head head head" 
+	"lists recipe shopping";
+
+	@media only screen and (max-width: $bp-large){
+		max-width:100%;
+		margin:0;
+	}
+}

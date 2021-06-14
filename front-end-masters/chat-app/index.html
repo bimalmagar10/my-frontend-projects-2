@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="ionicons.min.css">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="queries.css">
+</head>
+<body>
+
+<!--   Samuel Green
+  Available to Walk
+
+  That sounds great. I’d be happy with that.
+
+  Could you send over some pictures of your dog, please?
+
+  Here are a few pictures. She’s a happy girl!
+
+  Can you make it?
+
+  She looks so happy! The time we discussed works. How long shall I take her out for?
+
+  30 minute walk
+  $29
+
+  1 hour walk
+  $49
+
+  Type a message…
+
+  Simple booking
+
+  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+  discuss arrangements and make bookings. Once the walk has been completed you can rate 
+  your walker and book again all through the chat. -->
+  <div class="container">
+    <div class="box">
+      <div class="box__mobile">
+        <div class="box__chat">
+          <!--CHAT PROFILE STARTS HERE-->
+          <div class="box__chat-profile">
+            <div class="box__chat-profile--main">
+              <span class="box__go-back-icon"><i class="ion-ios-arrow-back"></i></span>
+              <figure class="box__chat-fig">
+                <img src="images/avatar.jpg" alt="Profile Image of Receiver" class="box__chat-img">
+              </figure>
+              <div class="box__chat-heading">
+                <h1 class="box__chat-profile--name">Samuel Green</h1>
+                <h3 class="box__chat-profile--status">Available to Walk</h3>
+              </div>
+            </div>
+            <div class="box__chat-profile--sub">
+              <span><i class="ion-ios-more"></i></span>
+            </div>
+          </div>
+          <!--CHAT PROFILE ENDS HERE-->
+
+          <!--CHAT DETAILS STARTS HERE-->
+          <div class="box__chat-details">
+            <div class="box__chat-details--receiver">
+              <ul class="box__chat-lists">
+                <li class="box__chat-lists--item">
+                  <p class="box__chat--message">
+                    That sounds great.I'd be happy with that.
+                  </p>
+                </li>
+                <li class="box__chat-lists--item">
+                  <p class="box__chat--message">
+                    Could you send over some picture of your dog, please?
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="box__chat-details--sender">
+              <ul class="box__chat-lists">
+                <li class="box__chat-lists--item">
+                  <div class="box__chat-list-picture">
+                    <img src="images/dog-image-1.jpg" alt="Image 1" class="box__chat-list-img">
+                    <img src="images/dog-image-2.jpg" alt="Image 2" class="box__chat-list-img">
+                    <img src="images/dog-image-3.jpg" alt="Image 3" class="box__chat-list-img">
+                  </div>
+                </li>
+                <li class="box__chat-lists--item">
+                   <p class="box__chat--message">
+                    Here are a few pictures. She’s a happy girl!
+                   </p>
+                </li>
+                <li class="box__chat-lists--item">
+                   <p class="box__chat--message">
+                     Can you make it?
+                   </p>
+                </li>
+              </ul>
+            </div>
+            <div class="box__chat-details--receiver">
+              <ul class="box__chat-lists">
+                <li class="box__chat-lists--item">
+                  <p class="box__chat--message">
+                    She looks so happy!.The time we discussed works. How long shall I take her out for?
+                  </p>
+                </li>
+                <li class="box__chat-lists--item">
+                  <div class="box__radio-button">
+                    <label class="btn__radio">
+                      <span class="radio__input">
+                        <input type="radio" id="one-hour" value="1 hour walk" class="radio__btn">
+                        <span class="radio__control"></span>
+                      </span>
+                      <span class="radio__label">1 hour walk</span>
+                    </label>
+                    <span class="price">$29</span> 
+                  </div>
+                </li>
+                <li class="box__chat-lists--item">
+                  <div class="box__radio-button">
+                    <label class="btn__radio">
+                      <span class="radio__input">
+                        <input type="radio" id="one-hour" value="1 hour walk" class="radio__btn">
+                        <span class="radio__control"></span>
+                      </span>
+                      <span class="radio__label">1 hour walk</span>
+                    </label>
+                    <span class="price">$29</span> 
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="box__chat-submit">
+              <div class="submit__button">
+                <input type="text" class="box__input-submit" placeholder="Type message here">
+                <button class="btn__submit"><i class="ion-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!--CHAT DETAILS ENDS HERE-->
+
+        </div>
+      </div>
+      <div class="box__booking">
+        <div class="booking">
+          <h1 class="booking__heading">Simple Booking</h1>
+          <p class="booking__paragraph">
+            Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Bimal Thapa Magar</a>.
+  </div> -->
+</body>
+</html>

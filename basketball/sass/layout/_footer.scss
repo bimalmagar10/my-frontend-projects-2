@@ -1,0 +1,50 @@
+.footer {
+	&__container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       @include respond(small-phone){
+       	flex-direction: column;
+       }
+	}
+	&__title {
+       flex: 0 0 60%;
+       padding: 2rem;
+       @include respond(small-phone){
+       	 flex: 1;
+       	 margin-bottom: 3rem;
+       }
+	}
+	&__links {
+       flex:0 0 40%;
+       padding: 2rem;
+	        @include respond(small-phone){
+	       	 flex: 1;
+	       	 border:1px solid $color-secondary-light-2;
+	       	 padding: 2rem 3rem;
+	       	 border-radius:5px;
+	        }         
+      &-box {
+      	padding: 4rem 10rem;
+      	display: inline-block;
+      	border:1px solid $color-secondary-light-2;
+      	border-radius: 5px;
+	      	 @include respond(small-phone){
+	       	    border:none;
+	       	    padding: 4rem;
+	         }
+      }
+	}
+	&__social-icon {
+		height: 2.5rem;
+		width: 2.5rem;
+		cursor: pointer;
+		transition: fill .2s;
+		&:not(:last-child){
+			margin-right: 2rem;
+		}
+		&:hover {
+			fill: $color-primary;
+		}
+	}
+}

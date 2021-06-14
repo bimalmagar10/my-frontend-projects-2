@@ -1,0 +1,102 @@
+.footer{
+	&-right{
+       &__box {
+       	padding-top: 10rem;
+       	display: flex;
+       	align-content: stretch;
+       	align-items: flex-start;
+        @include responsive(phone){
+          padding-bottom: 5rem;
+        }
+       	&--1 {
+          margin: 0 auto;
+       	}
+       	&--2 {
+         margin:0 auto;
+       	}
+       }
+       &__list {
+       	list-style-type: none;
+       	 &--item {
+			color: $color-grey-dark;
+			margin-top: 2rem;
+			font-size:1.6rem;
+			transition: color .2s;
+			cursor: pointer;
+			&:hover {
+				color: $color-blue;
+			}
+       	 }
+       }
+	}
+	&-left {
+    padding: 10rem;
+    color: $color-white;
+    @include responsive(small-phone){
+      // padding-top: 20rem;
+      // padding-bottom: 30rem;
+    }
+    &__box { 
+      display: flex;
+      height: 20vh;
+      justify-content: space-between;
+      @include responsive(phone){
+          flex-direction: column;
+          align-items: center;
+        }
+      &--1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 0 0 40%;
+        margin-bottom: 3rem;
+      }
+      &--2 {
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 0 0 60%;
+        padding-bottom: 5rem;
+      }
+
+    }
+    &__heading {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+	}
+  &__link-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: flex-start;
+      flex: 0 0 80%;
+  }
+  &__links {
+     display: block;
+     margin-right: 2rem;
+     border-radius: 50%;
+     display: inline-block;
+     background-color: $color-grey-dark;
+     padding: .5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     &:hover {
+        background-color: $color-white;
+      }
+  }
+  &__icon {
+     height: 2rem;
+     width: 2rem;
+     fill:$color-black-dark;
+      
+  }
+
+}

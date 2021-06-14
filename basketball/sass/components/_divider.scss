@@ -1,0 +1,17 @@
+.section-divider {
+    color: $color-secondary-light-2;
+    font-size: 1.6rem;
+	display: grid;
+	grid-template-columns: .1fr max-content 1fr;
+	grid-column-gap:2rem; 
+	align-items: center;
+	padding: 3rem 0;
+	&::after,
+	&::before {
+		content: "";
+		height: 1px;
+        background-color: $color-secondary-light-2;
+        width: 100%;
+        
+	}
+}

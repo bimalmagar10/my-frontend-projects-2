@@ -1,0 +1,39 @@
+@media only screen and (max-width: 23.4375em){
+	html {
+		font-size: 45%;
+		height: -webkit-fill-available;
+	}
+	.container {
+		width: 100%;
+		min-height: -webkit-fill-available;
+		height: 100%;
+		overflow: visible;
+	}
+	.container::after {
+		top: 70vh;
+		width: 40vw;
+        height: 100vh;
+        border-radius: 75vw 3vw 0 0;
+        transform: translateX(0);
+	}
+	.container::before {
+		width: 55vw;
+		height: 60vh;
+		border-radius: 0 0 1000.5vw 15.5vw;
+	}
+	.box {
+	   margin-top: 10rem;
+	   flex-direction: column;
+	   margin-left:-5rem;
+	   justify-content: center;
+	}
+	.box__mobile {
+		height: 450px;
+		width: 240px;
+		margin: 0 auto;
+	}
+	.box__booking {
+        margin-top: 5rem;
+        width: 100%;
+	}
+}

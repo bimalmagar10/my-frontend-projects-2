@@ -1,0 +1,90 @@
+.news {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	& > *:not(:last-child) {
+   		margin-bottom: 5rem;
+	}
+	&__header {
+      font-weight: 400;
+      padding: .5rem 1rem .5rem .5rem;
+      background-color: $color-secondary;
+      border-radius: 50px;
+      font-size:1.3rem;
+	}
+	&__link {
+       color: $color-tertiary-light;
+       text-decoration: none;
+       @include respond(phone){
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+       }
+
+	}
+	&__head {
+    text-transform: uppercase;
+       background-color: $color-tertiary;
+       color: #fff;
+       padding: .5rem 1rem;
+       display: inline-block;
+       border-radius: 50px;
+       margin-right: 5px;
+        @include respond(phone){
+         flex: 0 0 10%;
+       }
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2,minmax(25rem,1fr));
+		grid-gap: 4rem;
+    @include respond(phone){
+      grid-template-columns: minmax(15rem,1fr);
+    }
+       &--item {
+         display: flex;
+         flex-direction: column;
+         & > *:not(:last-child){
+         	margin-bottom: 3rem;
+         }
+       }
+       &--picture {
+       	transition: all .2s;
+         &:hover {
+         	transform: scale(1.01);
+         	box-shadow: 0 1rem 2rem rgba($color-tertiary,.25);
+         }
+       }
+	}
+	&__img {
+       width: 100%;
+       height: 100%;
+       display: block;
+       object-fit: cover;
+	}
+	&__description {
+       font-size:1.7rem;
+       font-weight: 300;
+       padding: 0 3rem;
+	}
+	&__button {
+      
+       &:link,
+       &:visited {
+       	 align-self: center;
+       	 font-size: 1.6rem;
+       	 color: $color-tertiary-light;
+       	 text-decoration: none;
+       	 background-color: $color-secondary;
+       	 padding: 1.2rem 1.5rem;
+       	 border-radius: 5px;
+       	 display: inline-block;
+       	 transition: all .3s;
+       }
+       &:hover {
+       	background-color: $color-secondary-light-2;
+       }
+	}
+
+}

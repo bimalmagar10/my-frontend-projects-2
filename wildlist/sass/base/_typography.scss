@@ -1,0 +1,43 @@
+
+.heading__default {
+	font-weight: 700;
+	font-size: 4rem;
+}
+.heading__primary{
+	font-size: 7rem;
+	letter-spacing: 0px;
+}
+.heading__secondary {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+.heading__tertiary {
+	font-size:2.5rem;
+	letter-spacing: 1px;
+}
+.heading__fourth {
+	font-weight: 700;
+	font-size: 2rem;
+	letter-spacing: 1px;
+}
+.heading__penta {
+	color: $color-white;
+	font-size: 1.8rem;
+}
+.heading__advertisement {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.text {
+	font-weight: 300;
+}
+.copyright {
+	color:$color-white-light;
+	font-size: 1.5rem;
+	margin-top: 3rem;	
+	letter-spacing: 1px;
+	text-align: center;
+	@include responsive(phone){
+		margin-top:0;
+	}
+}

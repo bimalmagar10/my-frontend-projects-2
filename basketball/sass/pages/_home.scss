@@ -1,0 +1,25 @@
+.section-header {	
+  padding: 10rem 0;
+  grid-column: center-start /  center-end;
+}
+.previous {  
+  grid-column: full-start/full-end;
+}
+.latest {
+  padding: 10rem 0;	
+	grid-column: center-start / center-end;
+}
+.lazy {
+   grid-column: full-start / full-end;
+}
+.about {
+  padding: 10rem 0;
+  grid-column:center-start / center-end;
+}
+.message {
+  grid-column: full-start / full-end;
+}
+.footer {
+  padding: 10rem 0;
+	grid-column: center-start / center-end;
+}

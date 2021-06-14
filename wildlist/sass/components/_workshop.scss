@@ -1,0 +1,134 @@
+.workshop {
+
+	&__box {
+		display: grid;
+		grid-template-rows: 70vh;
+		grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+		grid-gap: 4rem;
+		@include responsive(tab-port){
+			grid-template-columns: 1fr;
+			grid-auto-rows:600px;
+		}
+	}
+	&__item {
+		overflow: hidden;
+        position: relative;
+	}
+	&__img {
+       transition: opacity .2s;
+       height: 100%;
+       width: 100%;
+	}
+	&__info {
+		color: $color-white;
+		font-size: 2rem;
+		padding: 3rem;
+		position: absolute;
+		top: 10%;
+		bottom: 0;
+		z-index: 9000;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-evenly;
+		width: 100%;
+		transform: translate(0,55%);
+		overflow: hidden;
+		cursor: pointer;
+		transition: transform .2s cubic-bezier(.77,.77,.88,.87);		
+		&--1 {
+			background-color: $color-tertiary;
+		}
+		&--2 {
+			background-color: $color-primary;
+		}
+		&--3 {
+			background-color: $color-secondary;
+		}
+		&:hover {
+			transform: translate(0,0);
+	   }
+	   &:hover ~ .workshop__img {
+	   	opacity: 0.6;
+	   }
+	   @include responsive(tab-port){
+	   	   transform: translate(0,50%);
+	   	   justify-content: flex-start;
+			& > * {
+				margin-bottom: 2rem;
+				
+			}
+			&:hover {
+				transform: translate(0,50%);
+			}
+			&:hover ~ .workshop__img {
+	   			opacity: 1;
+	   		}
+		}
+		@include responsive(small-phone){
+
+			transform: translate(0,70%);
+	   	   justify-content: flex-start;
+			& > * {
+				margin-bottom: 2rem;	
+			}
+			& > h3 {
+				padding-bottom: 10rem;
+			}
+			& > :nth-child(2){
+				margin-bottom: 5rem;
+			}
+			&:hover {
+				transform: translate(0,70%);
+			}
+			&:hover ~ .workshop__img {
+	   			opacity: 1;
+	   		}
+		}
+	}
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		display: block;
+	}	
+}
+.person {
+	&__details {
+		display: flex;
+		justify-content:flex-start;
+		align-items: center;
+		color: currentColor;
+		text-decoration: none;
+		cursor: pointer;
+		align-content: center;
+       & > img {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		display: block;
+		margin-right: 1rem;
+       }
+       &:hover {
+       	 & > .person__name {
+       	 	&::after {
+       	 		opacity: 0;
+       	 	}
+       	 }
+       }
+	}
+	&__name {
+        // border-bottom: 2px solid $color-white;
+        transition: all .2s;
+        position: relative;
+        &::after {
+        	content:"";
+        	position: absolute;
+        	bottom: 0;
+        	left: 0;
+        	background-color: currentColor;
+        	height:2px;
+        	width: 100%;
+        }
+	}
+}

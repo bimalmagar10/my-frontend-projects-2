@@ -1,0 +1,19 @@
+.btn{
+	background-color: $color-primary;
+	color: #fff;
+	border:none;
+	padding: 1.3rem;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	display:inline-block;
+	flex: 1;
+	cursor: pointer;
+	transition: all .2s;
+	&:hover {
+		background-color: $color-primary-dark;
+	}
+	&--footer {
+      text-decoration: none;
+	}
+}

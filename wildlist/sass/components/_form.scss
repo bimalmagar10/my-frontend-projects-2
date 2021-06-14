@@ -1,0 +1,61 @@
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	@include responsive(phone){
+		align-items: flex-end;
+	}
+	&__item {
+     display: block;
+	}
+	&__input {
+	   align-self: stretch;
+	   border: none;
+	   color: $color-grey-dark;
+	   background-color: transparent;
+       border:1px solid transparent;
+       border-bottom:2px solid $color-grey-dark;
+       padding: 1.2rem 1rem;
+       font-size:1.5rem;
+       transition: border-bottom .2s;
+       width: 100%;
+       display: block;
+       &:focus {
+       	border: none;
+       	outline: none;
+       	border-bottom:2px solid $color-blue;
+       }
+       &:invalid {
+         border-bottom:2px solid $color-secondary;
+       }
+       &::-webkit-input-placeholder {
+       	font-size:2rem;
+       }
+       
+	}
+	&__submit {
+      display:inline-block;
+      color: $color-black-dark;
+      align-self: flex-end;
+     .btn-submit {
+		 padding: 1.5rem 3rem;
+		 font-size:1.6rem;
+		 transition: all .1s;
+		 backface-visibility: hidden;
+		 background-color: $color-white;
+		 display: block;
+		 border:none;
+		 -webkit-transition: all .2s;
+		 -moz-transition: all .2s;
+		 -ms-transition: all .2s;
+		 -o-transition: all .2s;
+		 transition: all .2s;
+		 
+		 &:hover {
+		 	background-color: $color-blue;
+		 }
+     }
+	}
+}
